@@ -1,0 +1,11 @@
+name: Tournament
+version: 1.0
+author: xpr0legendx
+main: main.Main
+description: Plugin for hosting tournaments
+
+commands:
+  tournament:
+    usage: /<command> [start|stop|join|leave]
+    description: Allow people to join queue with start. End queue with stop.
+    aliases: [tr]
