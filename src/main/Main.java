@@ -2,10 +2,6 @@ package main;
 
 import java.util.ArrayList;
 
-
-
-
-
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Location;
@@ -21,6 +17,11 @@ import org.bukkit.inventory.PlayerInventory;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
+/*
+	don't mind the ugliness of this code
+
+*/
+
 public class Main extends JavaPlugin implements Listener {
 
 	private PluginManager pManager;
@@ -29,7 +30,6 @@ public class Main extends JavaPlugin implements Listener {
 	public void onEnable(){
 		//new C(this);
 		//new L(this);
-		
 		pManager = Bukkit.getPluginManager();
 		pManager.registerEvents(this, this);
 		
@@ -328,7 +328,7 @@ public class Main extends JavaPlugin implements Listener {
         		Bukkit.broadcastMessage(ChatColor.GREEN + checkD1.getName() +" has won.");
         		checkD1.getInventory().clear();
         		//checkD1.setHealth(0.0);
-        		//TODO: Test if teleport works - prob does
+        		
         		Location loc2 = new Location(checkD1.getWorld(), x+0.5, y+0.5, z+0.5, yawPDE, pitchPDE);
         		checkD2.teleport(loc2);
         		
@@ -350,9 +350,6 @@ public class Main extends JavaPlugin implements Listener {
     }
 	
 	
-	//TODO: Create onRespawnEvent
-	//TODO: Check if players are alive&&online everytime we are assuming they are - BV teleport, clearing inv, adding items to inv, etc.
-	//TODO: Put everything in seperate classes - this is getting messy :(
 	
 	
 	
